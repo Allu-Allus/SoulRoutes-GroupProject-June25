@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>National</title>
+    <!-- favicon -->
+  <link rel="shortcut icon" href="./media/favicon.jpg" type="image/x-icon">
+  <!-- google font  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Ancizar+Serif:ital,wght@0,300..900;1,300..900&family=Comic+Relief:wght@400;700&family=Dancing+Script:wght@400..700&family=Doto:wght@100..900&family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet">
+  <!-- font awesome CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- tailwind CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <!-- style -->
+    <!-- style -->
+  <style>
+    * {
+      font-family: "Playfair", serif;
+    }
+
+    #links {
+      color: #ffffff;
+    }
+
+    #links:hover {
+      color: #c9efff;
+    }
+  </style>
+
+</head>
+<body id="SoulRoutes" style="background-color:#faf3e0;">
+     <!-- navbar -->
+  <nav class="bg-[#7fb5d4] sticky top-0 z-50 w-full shadow-md">
+    <div class=" flex h-16 items-center justify-between">
+      <!-- logo -->
+      <div class="pl-2 ml-2">
+        <!-- <img src="./media/logo1.jpg" alt="logo"class="w-24 h-20"> -->
+        <h1 class="text-xl font-bold ml-0" style="font-family: 'Dancing Script', cursive; color: #ffffff;">
+          Soul Routes</h1>
+      </div>
+      <!-- desktop -->
+      <div class="hidden sm:ml-6 sm:block">
+        <div class="flex space-x-4 items-center">
+           <a href="./index.html" class="rounded-md px-4 py-2 text-xl font-medium inline-block" id="links">Home</a>
+          <a href="./about.html" class="rounded-md px-4 py-2 text-xl font-medium inline-block" id="links">About</a>
+          <a href="./national.html" class="rounded-md px-4 py-2 text-xl font-medium inline-block" id="links">National</a>
+          <a href="./international.html" class="rounded-md px-4 py-2 text-xl font-medium inline-block"id="links">International</a>
+          <a href="./service.html" class="rounded-md px-4 py-2 text-xl font-medium inline-block" id="links">Services</a>
+          <a href="./login.html" class="rounded-md px-4 py-2 text-xl font-medium inline-block" id="links">Login</a>
+          <a href="./booking.html" class="rounded-md px-4 py-2 text-xl font-medium inline-block" id="links">Contact</a>
+        </div>
+      </div>
+    </div>
+    <!-- Mobile menu, show/hide based on menu state. -->
+    <div class="sm:hidden " id="mobile-menu">
+      <div class="space-y-1 px-2 pt-2 pb-3 ">
+       <a href="./index.html" class="block rounded-md px-3 py-2 text-sm font-medium " id="links">Home</a>
+        <a href="./about.html" class="block rounded-md px-3 py-2 text-sm font-medium" id="links">ABout</a>
+           <a href="./national.html" class="block rounded-md px-3 py-2 text-sm font-medium" id="links">National</a>
+          <a href="./international.html" class="block rounded-md px-3 py-2 text-sm font-medium"id="links">International</a>
+        <a href="./service.html" class="block rounded-md px-3 py-2 text-sm font-medium" id="links">Services</a>
+        <a href="./login.html" class="block rounded-md px-3 py-2 text-sm font-medium" id="links">Login</a>
+        <a href="./booking.html" class="block rounded-md px-3 py-2 text-sm font-medium" id="links">Contact</a>
+      </div>
+    </div>
+  </nav>
+  <!-- landing section -->
+        
+ <div class="w-full min-h-[60vh] md:min-h-screen bg-[url('https://static.india.com/wp-content/uploads/2022/05/Taj-Mahal.jpg')] bg-cover bg-center bg-no-repeat">
+
+ 
+      <div class="text-white w-full flex justify-center items-center flex-col pt-20">
+        <h1 class="md:text-9xl pt-5">DOMESTIC</h1>
+        <div class="md:grid grid-cols-3 gap-30 py-10">
+          <button class=""><a href="#family">FAMILY</a></button>
+          <button><a href="#solo">SOLO</a></button>
+          <button><a href="#honeymoon">HONEYMOON</a></button>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+  <!-- <div>
+    <h1 class=" w-full flex justify-center items-center pt-20 text-3xl"></h1>
+  </div> -->
+  <!-- <div class="grid grid-cols-4 gap-4 pt-20 pt-10">
+    
+    <div class="">
+     
+      <img class="w-fit h-fit" src="https://static.wixstatic.com/media/c8e24e_4752e04fcef74d83aa3cf2ed20671995~mv2.jpg/v1/fill/w_568,h_356,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/c8e24e_4752e04fcef74d83aa3cf2ed20671995~mv2.jpg" alt="">
+      <h3 class="text-center">Kerala</h3>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore labore natus, exercitationem iste eligendi
+        consequatur ipsum magni unde? Dolor, sit provident! Dicta rem placeat vitae sed consequuntur? Maiores, illum
+        ducimus.</p>
+      <button>Boooking</button>
+    </div>
+    <div>
+      <img class="w-fit h-48" src="https://i0.wp.com/globalkashmir.net/wp-content/uploads/2024/07/Kashmir-Reorganization-Bill.jpg" alt="">
+      <h3 class="text-center">Kashmir</h3>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore labore natus, exercitationem iste eligendi
+        consequatur ipsum magni unde? Dolor, sit provident! Dicta rem placeat vitae sed consequuntur? Maiores, illum
+        ducimus.</p>
+      <button>Boooking</button>
+    </div>
+    <div>
+      <img class="w-80 h-48" src="https://static.toiimg.com/img/115224983/Master.jpg" alt="">
+      <h3 class="text-center">Jaipur</h3>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore labore natus, exercitationem iste eligendi
+        consequatur ipsum magni unde? Dolor, sit provident! Dicta rem placeat vitae sed consequuntur? Maiores, illum
+        ducimus.</p>
+      <button>Boooking</button>
+    </div>
+     <div>
+      <img class="w-80 h-48" src="https://static.toiimg.com/img/115224983/Master.jpg" alt="">
+      <h3 class="text-center">Jaipur</h3>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore labore natus, exercitationem iste eligendi
+        consequatur ipsum magni unde? Dolor, sit provident! Dicta rem placeat vitae sed consequuntur? Maiores, illum
+        ducimus.</p>
+      <button class="bg-blue-400">Boooking</button>
+    </div>
+  </div>
+  
+  <div class="grid grid-cols-4 gap-4 pt-20 pt-10">
+    
+    <div class="">
+     
+      <img class="w-fit h-fit" src="https://static.wixstatic.com/media/c8e24e_4752e04fcef74d83aa3cf2ed20671995~mv2.jpg/v1/fill/w_568,h_356,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/c8e24e_4752e04fcef74d83aa3cf2ed20671995~mv2.jpg" alt="">
+      <h3 class="text-center">Kerala</h3>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore labore natus, exercitationem iste eligendi
+        consequatur ipsum magni unde? Dolor, sit provident! Dicta rem placeat vitae sed consequuntur? Maiores, illum
+        ducimus.</p>
+      <button>Boooking</button>
+    </div>
+    <div>
+      <img class="w-fit h-48" src="https://i0.wp.com/globalkashmir.net/wp-content/uploads/2024/07/Kashmir-Reorganization-Bill.jpg" alt="">
+      <h3 class="text-center">Kashmir</h3>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore labore natus, exercitationem iste eligendi
+        consequatur ipsum magni unde? Dolor, sit provident! Dicta rem placeat vitae sed consequuntur? Maiores, illum
+        ducimus.</p>
+      <button>Boooking</button>
+    </div>
+    <div>
+      <img class="w-80 h-48" src="https://static.toiimg.com/img/115224983/Master.jpg" alt="">
+      <h3 class="text-center">Jaipur</h3>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore labore natus, exercitationem iste eligendi
+        consequatur ipsum magni unde? Dolor, sit provident! Dicta rem placeat vitae sed consequuntur? Maiores, illum
+        ducimus.</p>
+      <button>Boooking</button>
+    </div>
+     <div>
+      <img class="w-80 h-48" src="https://static.toiimg.com/img/115224983/Master.jpg" alt="">
+      <h3 class="text-center">Jaipur</h3>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore labore natus, exercitationem iste eligendi
+        consequatur ipsum magni unde? Dolor, sit provident! Dicta rem placeat vitae sed consequuntur? Maiores, illum
+        ducimus.</p>
+      <button class="bg-blue-400">Boooking</button>
+    </div>
+
+  </div> -->
+
+  <div class="flex justify-center items-center flex-col" style="background-color:#faf3e0;">
+    <h1 class="md:text-center mt-10 md:text-4xl font-bold" style="font-family: 'Playfair', serif;color: #2e2e2e;" id="family" >FAMILY
+      DESTINATIONS</h1>
+    <!-- family -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 px-6 sm:px-12 lg:px-40 mt-10"  >
+
+      <!-- destination1 -->
+      <div class="transition duration-300 transform hover:scale-105 hover:shadow-xl rounded-lg bg-white/90 p-4"
+        style="background-color:#ffffff;">
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmZw2pOycVC-K15EaFilgggpuoPxbxB64bfKiIp5KNDRkmq857dbcG4Rg6cytMWMEkccc&usqp=CAU"
+          alt="destination1" class="w-full h-52 object-cover rounded-md mb-3" />
+
+        <h3 class="text-center md:text-2xl mb-1" style="color: #707070;">Enchanting Kerala</h3>
+
+        <p class="text-center text-sm mt-2" style="color: #5e5e5e;">
+          5 night 6 Days <br>
+          kochi, Munnar, Thekkadi, Alleppy <br>Meet and Greet service at Airport <br>To and Fro Economy flight ticket
+
+        </p>
+
+        <div class="text-center mt-3">
+          <a class="book-btn px-6 py-2 bg-[#f76c5e] rounded text-white rounded " href="./booking.html">Book Now</a>
+        </div>
+      </div>
+      <!-- destination2-->
+      <div class="transition duration-300 transform hover:scale-105 hover:shadow-xl rounded-lg bg-white/90 p-4"
+        style="background-color:#ffffff;">
+        <img src="https://www.trawell.in/admin/images/upload/078212929Delhi_India_Gate_Main.jpg" alt="destination1"
+          class="w-full h-52 object-cover rounded-md mb-3" />
+
+        <h3 class="text-center md:text-2xl mb-1" style="color:  #707070;">Delightful Delhi</h3>
+
+        <p class="text-center text-sm mt-2" style="color: #5e5e5e;">
+          6 days <br>India Gate, Lotus Temple, Qutub minar, Taj Mahal, Agra Fort <br>A/C Delux Bus Transport
+
+        </p>
+
+        <div class="text-center mt-3">
+          <a class="book-btn px-6 py-2 bg-[#f76c5e] rounded text-white rounded " href="./booking.html">Book Now</a>
+        </div>
+      </div>
+      <!-- destination3-->
+      <div class="transition duration-300 transform hover:scale-105 hover:shadow-xl rounded-lg bg-white/90 p-4"
+        style="background-color:#ffffff;">
+        <img src="https://in.musafir.com/uploads/5_4_d115f28046.webp" alt="destination1"
+          class="w-full h-52 object-cover rounded-md mb-3" />
+
+        <h3 class="text-center md:text-2xl mb-1" style="color:  #707070;">Mesmerizing Kashmir</h3>
+
+        <p class="text-center text-sm mt-2" style="color: #5e5e5e;">
+          5 Days 6 Nights <br> Srinagar, Pahalham, Gulmarg, Sonmarg, Srinagar <br>To and Fro Economy flight ticket.Snow, Shikara, Gardens, Mountains, Memories.
+        </p>
+
+        <div class="text-center mt-3">
+          <a class="book-btn px-6 py-2 bg-[#f76c5e] rounded text-white rounded " href="./booking.html">Book Now</a>
+        </div>
+      </div>
+      <!-- destination4-->
+      <div class="transition duration-300 transform hover:scale-105 hover:shadow-xl rounded-lg bg-white/90 p-4"
+        style="background-color:#ffffff;">
+        <img src="https://t4.ftcdn.net/jpg/00/47/49/01/360_F_47490128_JLClMTbZyVdxl3OW2m8H4vJHW7hDZ8Jj.jpg"
+          alt="destination1" class="w-full h-52 object-cover rounded-md mb-3" />
+
+        <h3 class="text-center md:text-2xl mb-1" style="color:  #707070;">Hyderabad</h3>
+
+        <p class="text-center text-sm mt-2" style="color: #5e5e5e;">
+          To and fro Economy Class Flight Ticket <br>All Entry Tickets as per itinerary <br>Meet and greet service at
+          Airports
+        </p>
+
+        <div class="text-center mt-3">
+          <a class="book-btn px-6 py-2 bg-[#f76c5e] rounded text-white rounded " href="./booking.html">Book Now</a>
+        </div>
+      </div>
+      <!-- destination5-->
+      <div class="transition duration-300 transform hover:scale-105 hover:shadow-xl rounded-lg bg-white/90 p-4"
+        style="background-color:#ffffff;">
+        <img
+          src="https://lp-cms-production.imgix.net/2019-06/80216723.jpg?w=1095&fit=crop&crop=faces%2Cedges&auto=format&q=75"
+          alt="destination1" class="w-full h-52 object-cover rounded-md mb-3" />
+
+        <h3 class="text-center md:text-2xl mb-1" style="color:  #707070;">Amritsar-Shimla</h3>
+
+        <p class="text-center text-sm mt-2" style="color: #5e5e5e;">
+          5 Days <br>Amritser, Golden Temple, Shimla, Kufri <br> To and Fro Economy flight ticket <br>
+
+        </p>
+
+        <div class="text-center mt-3">
+          <a class="book-btn px-6 py-2 bg-[#f76c5e] rounded text-white rounded " href="./booking.html">Book Now</a>
+        </div>
+      </div>
+
+
+
+
+
+    </div>
+  </div>
+  <!-- solo -->
+  <div class="flex justify-center items-center flex-col" id="solo" style="background-color:#faf3e0;">
+    <h1 class="text-center mt-10 md:text-4xl font-bold" style="font-family: 'Playfair', serif;color: #2e2e2e;" >SOLO
+      PACKAGES</h1>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 px-6 sm:px-12 lg:px-40 mt-10">
+
+      <!-- destination1 -->
+      <div class="transition duration-300 transform hover:scale-105 hover:shadow-xl rounded-lg bg-white/90 p-4"
+        style="background-color:#ffffff;">
+        <img src="https://specialplacesofindia.com/wp-content/uploads/2024/09/Leh-Road-Trip-1024x524.jpg"
+          alt="destination1" class="w-full h-52 object-cover rounded-md mb-3" />
+
+        <h3 class="text-center md:text-2xl mb-1" style="color: #707070;">Conquer Ladakh</h3>
+
+        <p class="text-center text-sm mt-2" style="color: #5e5e5e;">
+          Hotel Spacious Parking Space <br>SPA Relaxation <br> Fitness Centre </p>
+
+        <div class="text-center mt-3">
+          <a class="book-btn px-6 py-2 bg-[#f76c5e] rounded text-white rounded " href="./booking.html">Book Now</a>
+        </div>
+      </div>
+      <!-- destination2-->
+      <div class="transition duration-300 transform hover:scale-105 hover:shadow-xl rounded-lg bg-white/90 p-4"
+        style="background-color:#ffffff;">
+        <img
+          src="https://s7ap1.scene7.com/is/image/incredibleindia/1-amarnath-yatra-pahalgam-jammu-kashmir-city-hero?qlt=82&ts=1726816087141"
+          alt="destination1" class="w-full h-52 object-cover rounded-md mb-3" />
+
+        <h3 class="text-center md:text-2xl mb-1" style="color:  #707070;">Mesmerizing Kashmir</h3>
+
+        <p class="text-center text-sm mt-2" style="color: #5e5e5e;">
+          Veg/Non-veg meals Availbale <br> Personal guidance is Availbale <br> fitness centers
+        </p>
+
+        <div class="text-center mt-3">
+          <a class="book-btn px-6 py-2 bg-[#f76c5e] rounded text-white rounded " href="./booking.html">Book Now</a>
+        </div>
+      </div>
+      <!-- destination3-->
+      <div class="transition duration-300 transform hover:scale-105 hover:shadow-xl rounded-lg bg-white/90 p-4"
+        style="background-color:#ffffff;">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSO-496fmySKh7BieqS51ALUPQZEzlyETUmw&s"
+          alt="destination1" class="w-full h-52 object-cover rounded-md mb-3" />
+
+        <h3 class="text-center md:text-2xl mb-1" style="color:  #707070;">Heavenly Himachal</h3>
+
+        <p class="text-center text-sm mt-2" style="color: #5e5e5e;">
+          Night Accommodation as per the Itinerary on twin sharing basis <br> Veg and Non Veg Meals as per the itinerary
+
+        <div class="text-center mt-3">
+          <a class="book-btn px-6 py-2 bg-[#f76c5e] rounded text-white rounded " href="./booking.html">Book Now</a>
+        </div>
+      </div>
+      <!-- destination4-->
+      <div class="transition duration-300 transform hover:scale-105 hover:shadow-xl rounded-lg bg-white/90 p-4"
+        style="background-color:#ffffff;">
+        <img src="https://www.indiantempletour.com/wp-content/uploads/2022/08/Manali-Tour-Package-From-Pune-scaled.webp"
+          alt="destination1" class="w-full h-52 object-cover rounded-md mb-3" />
+
+        <h3 class="text-center md:text-2xl mb-1" style="color:  #707070;">kulu- Manali</h3>
+
+        <p class="text-center text-sm mt-2" style="color: #5e5e5e;">
+          Manali ,Rothang pass*, Vashist Village, Kullu Valley <br> providing Accommondation, Meals, Transportation/Car.Adventure, Peace, Hills, Freedom, Reflection.
+
+
+
+
+
+
+
+
+
+        </p>
+
+        <div class="text-center mt-3">
+          <a class="book-btn px-6 py-2 bg-[#f76c5e] rounded text-white rounded " href="./booking.html">Book Now</a>
+        </div>
+      </div>
+      <!-- destination5-->
+      <div class="transition duration-300 transform hover:scale-105 hover:shadow-xl rounded-lg bg-white/90 p-4"
+        style="background-color:#ffffff;">
+        <img src="https://kashiannapurnatemple.com/wp-content/uploads/2025/04/kashi-varanasi.png" alt="destination1"
+          class="w-full h-52 object-cover rounded-md mb-3" />
+
+        <h3 class="text-center md:text-2xl mb-1" style="color:  #707070;">Varanasi</h3>
+
+        <p class="text-center text-sm mt-2" style="color: #5e5e5e;">
+          6 Days <br> providing Accommondation, Meals, Transportation/Car <br> Hotel Spacious Parking Space.Spiritual, Ghats, Temples, Rituals, Eternity.
+        </p>
+
+        <div class="text-center mt-3">
+          <a class="book-btn px-6 py-2 bg-[#f76c5e] rounded text-white rounded " href="./booking.html">Book Now</a>
+        </div>
+      </div>
+      <!-- destination6-->
+      <div class="transition duration-300 transform hover:scale-105 hover:shadow-xl rounded-lg bg-white/90 p-4"
+        style="background-color:#ffffff;">
+        <img src="https://www.agoda.com/wp-content/uploads/2024/04/Featured-image-Pondicherry-India.jpg"
+          alt="destination1" class="w-full h-52 object-cover rounded-md mb-3" />
+
+        <h3 class="text-center md:text-2xl mb-1" style="color:  #707070;"> Pondicherry</h3>
+
+        <p class="text-center text-sm mt-2" style="color: #5e5e5e;">
+          The French Riviera of East <br>2-3 Days <br>Pre-Booking Activities <br> Aurobindo Ashram, AuroVille, Eden
+          beach
+        </p>
+
+        <div class="text-center mt-3">
+          <a class="book-btn px-6 py-2 bg-[#f76c5e] rounded text-white rounded " href="./booking.html">Book Now</a>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+  <!-- Honeymoon -->
+  <div class="flex justify-center items-center flex-col" id="honeymoon" style="background-color:#faf3e0;">
+    <h1 class="text-center mt-10 md:text-4xl font-bold" style="font-family: 'Playfair', serif;color: #2e2e2e;">HOMEYMOON
+      PACKAGES</h1>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 px-6 sm:px-12 lg:px-40 mt-10">
+
+      <!-- destination1 -->
+      <div class="transition duration-300 transform hover:scale-105 hover:shadow-xl rounded-lg bg-white/90 p-4"
+        style="background-color:#ffffff;">
+        <img src="https://img1.wsimg.com/isteam/stock/3441/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:1280" alt="destination1" class="w-full h-52 object-cover rounded-md mb-3" />
+
+        <h3 class="text-center md:text-2xl mb-1" style="color: #707070;">Sunshine Goa</h3>
+
+        <p class="text-center text-sm mt-2" style="color: #5e5e5e;">
+          3 Days <br>To and fro Economy Class Flight Ticket <br>Meet and greet service at Airports <br>Transfers in AC vehicles <br>All Entry Tickets as per itinerary
+        </p>
+
+        <div class="text-center mt-3">
+          <a class="book-btn px-6 py-2 bg-[#f76c5e] rounded text-white rounded " href="./booking.html">Book Now</a>
+        </div>
+      </div>
+      <!-- destination2-->
+      <div class="transition duration-300 transform hover:scale-105 hover:shadow-xl rounded-lg bg-white/90 p-4"
+        style="background-color:#ffffff;">
+        <img src="https://levinlytourandtravels.com/wp-content/uploads/2021/09/kashmir.jpg" alt="destination1" class="w-full h-52 object-cover rounded-md mb-3" />
+
+        <h3 class="text-center md:text-2xl mb-1" style="color:  #707070;">Mesmerizing Kashmir</h3>
+
+        <p class="text-center text-sm mt-2" style="color: #5e5e5e;">
+         5 Days <br>Srinagar, Dal Lake, Shikkara Ride,Hazratbal Mosque, Nishat Bagh <br> To and fro Economy Class Flight Ticket, Meet and greet service at Airports
+
+
+        </p>
+
+        <div class="text-center mt-3">
+          <a class="book-btn px-6 py-2 bg-[#f76c5e] rounded text-white rounded " href="./booking.html">Book Now</a>
+        </div>
+      </div>
+      <!-- destination3-->
+      <div class="transition duration-300 transform hover:scale-105 hover:shadow-xl rounded-lg bg-white/90 p-4"
+        style="background-color:#ffffff;">
+        <img src="https://cdn.tripspoint.com/uploads/photos/1910/agra-taj-mahal-tour-in-sunrise-and-sunset-view_EZGF2.jpeg" alt="destination1" class="w-full h-52 object-cover rounded-md mb-3" />
+
+        <h3 class="text-center md:text-2xl mb-1" style="color:  #707070;">Wah Taj</h3>
+
+        <p class="text-center text-sm mt-2" style="color: #5e5e5e;">
+         4 days <br>Taj Mahal, Agra Fort, Lotus Temple, <br>Humayun Tomb, Hauz Khas, Qutub Minar <br>Transfers in AC vehicles,All Entry Tickets as per itinerary.Love, Marble, Majesty, Symbol, Eternal.
+        </p>
+
+        <div class="text-center mt-3">
+          <a class="book-btn px-6 py-2 bg-[#f76c5e] rounded text-white rounded " href="./booking.html">Book Now</a>
+        </div>
+      </div>
+      <!-- destination4-->
+      <div class="transition duration-300 transform hover:scale-105 hover:shadow-xl rounded-lg bg-white/90 p-4"
+        style="background-color:#ffffff;">
+        <img src="https://content.r9cdn.net/rimg/dimg/a9/dd/d6b29241-city-44818-166a7453734.jpg?width=1200&height=630&xhint=1600&yhint=1049&crop=true" alt="destination1" class="w-full h-52 object-cover rounded-md mb-3" />
+
+        <h3 class="text-center md:text-2xl mb-1" style="color:  #707070;">Munnar</h3>
+
+        <p class="text-center text-sm mt-2" style="color: #5e5e5e;">
+         2-3 Days <br>Tea Gardens, Top Station, Attukal Waterfalls, <br> Mattupetty Dam, Anamudi Peak <br> Rose Garden <br>eg/Non-Veg Meals are Availbale  <br>To And Fro Economy class Flight Ticket
+        </p>
+
+        <div class="text-center mt-3">
+          <a class="book-btn px-6 py-2 bg-[#f76c5e] rounded text-white rounded " href="./booking.html">Book Now</a>
+        </div>
+      </div>
+      <!-- destination5-->
+      <div class="transition duration-300 transform hover:scale-105 hover:shadow-xl rounded-lg bg-white/90 p-4"
+        style="background-color:#ffffff;">
+        <img src="https://escape2explore.s3.ap-south-1.amazonaws.com/StaticMedia/e84a75c1-0536-40bb-97a5-023db11f63d5.jpg" alt="destination1" class="w-full h-52 object-cover rounded-md mb-3" />
+
+        <h3 class="text-center md:text-2xl mb-1" style="color:  #707070;">Meeshapulimala, Kolukkumalai</h3>
+
+        <p class="text-center text-sm mt-2" style="color: #5e5e5e;">
+       2-3 days <br> Sunrise Treking Kolukkumalai viewpoint, <br>veg/Non-Veg Meals are Availbale <br> To And Fro Economy class Flight Ticket.Meesapulimala – Mist, Peaks, Trek, Serenity, Clouds.Kolukkumalai –Tea, Sunrise, Hills, Trails, Breeze.
+        </p>
+
+        <div class="text-center mt-3">
+          <a class="book-btn px-6 py-2 bg-[#f76c5e] rounded text-white" href="./booking.html">Book Now</a>
+        </div>
+      </div>
+      <!-- destination6-->
+      <div class="transition duration-300 transform hover:scale-105 hover:shadow-xl rounded-lg bg-white/90 p-4"
+        style="background-color:#ffffff;">
+        <img src="https://www.tourmyindia.com/states/rajasthan/image/honeymoon-banner-m.webp" alt="destination1" class="w-full h-52 object-cover rounded-md mb-3" />
+
+        <h3 class="text-center md:text-2xl mb-1" style="color:  #707070;">Rajasthan</h3>
+
+        <p class="text-center text-sm mt-2" style="color: #5e5e5e;">
+          3-4 days <br>
+          Jaipur, Udaipur, Jaisalmer, Jodhpur <br>
+
+          Round Trip Flights, Four Star Hotels,  <br>Intercity Car Transfers <br> Airport Transfers <br> Selected Meals
+        </p>
+
+        <div class="text-center mt-3">
+          <a class="book-btn px-6 py-2 bg-[#f76c5e] rounded text-white rounded " href="./booking.html">Book Now</a>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+  <!-- banner -->
+  <div class=" bg-[url(https://www.sotc.in/images/Emailers/2020/feb/honeymoon-page-banner/Kashmir-Honeymoon-Banner-1-1920x500.jpg)]  bg-gradient-to-r from-blue-400 to-indigo-400 text-white p-6 md:p-20 rounded-2xl shadow-xl max-w-4xl mx-auto my-10" >
+  <div class="flex flex-col md:flex-row items-center justify-between gap-6 bg">
+    
+    <!-- Left Content -->
+    <div>
+      <h2 class="text-3xl text-black md:text-4xl font-bold">🔥 Honeymoon Offer!</h2>
+      <p class="mt-1 text-lg text-black md:text-xl">Book your holiday package now & get <br> <span class="font-semibold text-[#f76c5e]">30% OFF</span></p>
+      <p class="text-sm text-black-200 mb-5">Limited time offer · T&Cs apply</p>
+    </div>
+
+    <!-- Right Button -->
+    <div>
+      <a href="./booking.html" class="inline-block book-btn px-6 py-2 bg-[#f76c5e] rounded text-white font-bold text-lg rounded-full hover:bg-yellow-300 transition-all duration-300">
+        Book Now
+      </a>
+    </div>
+  </div>
+</div>
+ <!-- footer -->
+  <footer class="bg-[#5da1c9] ">
+    <div class=" py-24 sm:py-32">
+      <div class="mx-auto max-w-7xl px-6 lg:px-8">
+        <h2 class="text-center text-lg/8 font-semibold text-gray-900">Proudly Partnered with the Pioneers of Travel</h2>
+        <div class="mt-10 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6 place-items-center">
+          <img class="max-h-24 w-full object-contain" src="./media/taj-removebg-preview.png" alt="Transistor" />
+          <img class="max-h-24 w-full object-contain" src="./media/makemytrrip-removebg-preview.png" alt="Reform" />
+          <img class="max-h-24 w-full object-contain" src="./media/emirates-removebg-preview.png" alt="Tuple" />
+          <img class="max-h-24 w-full object-contain" src="./media/clubmahindra.png" alt="SavvyCal"  />
+          <img class="max-h-24 w-full object-contain" src="./media/thomascook.png" alt="Statamic" />
+        </div>
+      </div>
+    </div>
+    <!-- section2 -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 px-6 lg:px-20 py-10 text-center">
+      <div>
+        <h1 class="text-center text-3xl font-bold mb-2" style="font-family: 'Dancing Script', cursive;">Soul Routes</h1>
+        <h2 class="text-lg font-semibold">Head Office - Kochi</h2>
+        <p class="text-sm">2nd Floor,Bayview Complex, Marine Drive </p>
+        <p class="text-sm">Shanmugam Road,Kochi Kerala-682031</p>
+        <p class="text-sm">+91 4578912597</p>
+        <p class="text-sm"><a href="mailto:info@soulroutes.com" class="contact-mail">info@soulroutes.com</a></p>
+        <div class="flex justify-center space-x-6 text-3xl ">
+          <i class="fa-brands fa-instagram"></i>
+          <i class="fa-brands fa-whatsapp"></i>
+          <i class="fa-brands fa-twitter"></i>
+          <i class="fa-brands fa-youtube"></i>
+          <i class="fa-brands fa-facebook"></i>
+        </div>
+        <h1 class="text-center mt-10 text-3xl"> About Soul Routes</h1>
+        <p>Soul Routes curates unforgettable journeys across the globe. Whether it's a honeymoon in the Maldives, solo
+          travel in Europe, or hidden treasures in India — we make every trip soulful and seamless.</p>
+
+      </div>
+
+      <div class="text-center">
+        <div class="flex flex-col items-center space-y-2 text-xl ">
+          <h1 class="text-center text-3xl font-bold" style="font-family: 'Dancing Script', cursive;">Soul Routes</h1>
+          <a href="./index.html" class="hover:text-white transition-colors">Home</a>
+          <a href="./about.html" class="hover:text-white transition-colors">About Us</a>
+          <a href="./national.html" class="hover:text-white transition-colors">National</a>
+          <a href="./international.html" class="hover:text-white transition-colors">International</a>
+          <a href="./service.html" class="hover:text-white transition-colors">Services</a>
+          <a href="./login.html" class="hover:text-white transition-colors">Login</a>
+          <a href="./booking.html" class="hover:text-white transition-colors">Contact</a>
+        </div>
+
+      </div>
+
+      <section class="px-4  ">
+        <h2 class="text-3xl md:text-4xl font-bold text-center  text-[#2e2e2e]" style="font-family: 'Playfair', serif;">
+          <u> Our Branches</u>
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 ">
+
+
+          <div class="flex flex-col items-center">
+            <h3 class="text-xl font-semibold text-gray-800 mb-2"><u>Noida</u></h3>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3929.877752532691!2d76.31775010000001!3d9.944128200000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b0873d997c4c9b5%3A0x1adc8f73e23c6aa8!2sForum%20Kochi!5e0!3m2!1sen!2sin!4v1749921335448!5m2!1sen!2sin"
+              width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <p class="mt-2 text-center text-sm font-medium ">5th Floor, Horizon Towers, Sector 6</p>
+            <p>Noida, UP– 201301 </p>
+
+            <p>+91 98765 43210</p>
+            <p><a href="mailto:north@soulroutes.com" class="contact-mail">north@soulroutes.com</a></p>
+          </div>
+
+          <div class="flex flex-col items-center text-justify">
+            <h3 class="text-xl font-semibold text-gray-800 mb-2"><u>Trivandrum</u></h3>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3928.8748218670153!2d76.3084032!3d10.0271873!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b080dafbed183bf%3A0x5951f316ba13a37e!2sLuLu%20International%20Shopping%20Mall!5e0!3m2!1sen!2sin!4v1749921379496!5m2!1sen!2sin"
+              width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <p class="mt-2 text-center text-sm font-medium ">3rd Floor, Skyline Business Bay</p>
+            <p>Technopark Campus Road, </p>
+            <p> Tvm 695582</p>
+
+            <p>+91 98957 24680</p>
+            <p><a href="mailto: trivandrum@soulroutes.com" class="contact-mail"> trivandrum@soulroutes.com</a></p>
+          </div>
+        </div>
+      </section>
+
+    </div>
+    <div class="flex justify-center items-center p-3">
+      <h6 class="text-center text-sm md:text-base">©2025 Soul Routes. All rights reserved. Crafted with ✈️ and ❤️ for
+        travel
+        lovers. </h6>
+    </div>
+      <div id="arrowUp" class="fixed bottom-6 right-6 z-50">
+  <a href="#SoulRoutes" 
+     class="bg-blue-600 hover:bg-blue-800 text-white p-4 rounded-full shadow-lg transition-all duration-300">
+    <i class="fa-solid fa-arrow-up text-xl"></i>
+  </a>
+</div>
+
+  </footer>
+</body>
+</html>

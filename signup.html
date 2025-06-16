@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Signup</title>
+      <!-- favicon -->
+  <link rel="shortcut icon" href="./media/favicon.jpg" type="image/x-icon">
+  <!-- google font  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Ancizar+Serif:ital,wght@0,300..900;1,300..900&family=Comic+Relief:wght@400;700&family=Dancing+Script:wght@400..700&family=Doto:wght@100..900&family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet">
+  <!-- font awesome CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+    * {
+      font-family: "Playfair", serif;
+    }
+
+   
+  </style>
+</head>
+
+<body  id="SoulRoutes" class="w-full min-h-screen bg-[url(https://images.unsplash.com/photo-1494500764479-0c8f2919a3d8?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)] bg-center bg-cover bg-no-repeat h-[100vh]  relative justify-center py-16">
+
+
+<nav class="bg-transparent sticky top-5 z-30 w-full shadow-md ">
+    <div class=" flex h-1 items-center justify-between mt-5">
+      <!-- logo -->
+      <div class="pl-2 ml-4 py-24">
+        <!-- <img src="./media/logo1.jpg" alt="logo"class="w-24 h-20"> -->
+        <h1 class="text-xl font-bold ml-0 mb-15" style="font-family: 'Dancing Script', cursive; color: #ffffff;">
+          Soul Routes</h1>
+      </div>
+      <!-- desktop -->
+      <div class="hidden sm:ml-6 sm:block mb-15" style="color: #ffffff">
+        <div class="flex space-x-4">
+           <a href="./index.html" class="rounded-md px-4 py-2 text-xl font-medium inline-block" id="links">Home</a>
+          <a href="./about.html" class="rounded-md px-4 py-2 text-xl font-medium inline-block" id="links">About</a>
+          <a href="./national.html" class="rounded-md px-4 py-2 text-xl font-medium inline-block" id="links">National</a>
+          <a href="./international.html" class="rounded-md px-4 py-2 text-xl font-medium inline-block"id="links">International</a>
+          <a href="./service.html" class="rounded-md px-4 py-2 text-xl font-medium inline-block" id="links">Services</a>
+          <a href="./login.html" class="rounded-md px-4 py-2 text-xl font-medium inline-block" id="links">Login</a>
+          <a href="./booking.html" class="rounded-md px-4 py-2 text-xl font-medium inline-block" id="links">Contact</a>
+        </div>
+      </div>
+    </div>
+    <!-- Mobile menu, show/hide based on menu state. -->
+    <div class="sm:hidden" id="mobile-menu">
+      <div class="space-y-1 px-2 pt-2 pb-3">
+       <a href="./index.html" class="block rounded-md px-3 py-2 text-sm font-medium " id="links">Home</a>
+        <a href="./about.html" class="block rounded-md px-3 py-2 text-sm font-medium" id="links">ABout</a>
+           <a href="./national.html" class="block rounded-md px-3 py-2 text-sm font-medium" id="links">National</a>
+          <a href="./international.html" class="block rounded-md px-3 py-2 text-sm font-medium"id="links">International</a>
+        <a href="./service.html" class="block rounded-md px-3 py-2 text-sm font-medium" id="links">Services</a>
+        <a href="./login.html" class="block rounded-md px-3 py-2 text-sm font-medium" id="links">Login</a>
+        <a href="./booking.html" class="block rounded-md px-3 py-2 text-sm font-medium" id="links">Contact</a>
+      </div>
+    </div>
+  </nav>  
+
+
+ <div class="flex-grow flex items-center justify-center px-4 py-10">
+  <div class="border-2 border-white rounded-xl p-6 sm:p-10 bg-transparent bg-opacity-40 backdrop-blur-sm shadow-lg w-full max-w-md">
+    <h2 class="text-center text-2xl font-bold uppercase text-white mb-6">Sign Up</h2>
+
+  
+    <div class="mb-4">
+      <label class="block mb-1 font-semibold text-white">Username</label>
+      <input type="text" placeholder="Username"
+        class="w-full p-2 rounded-full border border-gray-300 text-black outline-none" />
+    </div>
+
+    
+    <div class="mb-4">
+      <label class="block mb-1 font-semibold text-white">Email</label>
+      <input type="email" placeholder="Email"
+        class="w-full p-2 rounded-full border border-gray-300 text-black outline-none" />
+    </div>
+
+
+    <div class="mb-4">
+      <label class="block mb-1 font-semibold text-white">Password</label>
+      <input type="password" placeholder="Password"
+        class="w-full p-2 rounded-full border border-gray-300 text-black outline-none" />
+    </div>
+
+    
+    <div class="flex items-center mb-6 text-white">
+      <input type="checkbox" id="remember" class="mr-2">
+      <label for="remember">Remember me</label>
+    </div>
+
+   
+    <div class="flex justify-center items-center">
+      <button
+        class="px-12  bg-purple-600 hover:bg-indigo-700 text-white font-semibold py-2 rounded-md border-4 border-double">
+        Signup
+      </button>
+    </div>
+
+  
+    <p class="mt-4 text-center text-sm text-white">
+      Already have an account?
+      <a href="login.html" class="underline hover:text-indigo-300">Login</a>
+    </p>
+  </div>
+</div>
+
+</body>
+
+</html>

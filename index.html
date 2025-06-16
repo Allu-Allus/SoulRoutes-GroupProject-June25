@@ -1,0 +1,867 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Soule Routes</title>
+  <!-- favicon -->
+  <link rel="shortcut icon" href="./media/favicon.jpg" type="image/x-icon">
+  <!-- google font  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Ancizar+Serif:ital,wght@0,300..900;1,300..900&family=Comic+Relief:wght@400;700&family=Dancing+Script:wght@400..700&family=Doto:wght@100..900&family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet">
+  <!-- font awesome CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- tailwind CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <!-- style -->
+  <style>
+    * {
+      font-family: "Playfair", serif;
+    }
+
+    #links {
+      color: #ffffff;
+    }
+
+    #links:hover {
+      color: #c9efff;
+    }
+
+    .explore-btn {
+      background-color: #f76c5e;
+      color: #FFF;
+      padding: 4px 14px;
+      text-decoration: none;
+      border-radius: 8px;
+      transition: all 0.3s ease;
+      display: inline-block;
+    }
+
+    .explore-btn:hover {
+      background-color: #e4572e;
+
+    }
+  </style>
+</head>
+
+<body id="SoulRoutes" style="background-color:#faf3e0;">
+  <!-- navbar -->
+  <nav class="bg-[#7fb5d4] sticky top-0 z-50 w-full shadow-md">
+    <div class=" flex h-16 items-center justify-between">
+      <!-- logo -->
+      <div class="pl-2 ml-2">
+     
+        <h1 class="text-xl font-bold ml-0" style="font-family: 'Dancing Script', cursive; color: #ffffff;">
+          Soul Routes</h1>
+      </div>
+      <!-- desktop -->
+      <div class="hidden sm:ml-6 sm:block">
+        <div class="flex space-x-4 items-center">
+          <a href="./index.html" class="rounded-md px-4 py-2 text-xl font-medium inline-block" id="links">Home</a>
+          <a href="./about.html" class="rounded-md px-4 py-2 text-xl font-medium inline-block" id="links">About</a>
+          <a href="./national.html" class="rounded-md px-4 py-2 text-xl font-medium inline-block" id="links">National</a>
+          <a href="./international.html" class="rounded-md px-4 py-2 text-xl font-medium inline-block"id="links">International</a>
+          <a href="./service.html" class="rounded-md px-4 py-2 text-xl font-medium inline-block" id="links">Services</a>
+          <a href="./login.html" class="rounded-md px-4 py-2 text-xl font-medium inline-block" id="links">Login</a>
+          <a href="./booking.html" class="rounded-md px-4 py-2 text-xl font-medium inline-block" id="links">Contact</a>
+        </div>
+      </div>
+    </div>
+    <!-- Mobile menu, show/hide based on menu state. -->
+    <div class="sm:hidden " id="mobile-menu">
+      <div class="space-y-1 px-2 pt-2 pb-3 ">
+        <a href="./index.html" class="block rounded-md px-3 py-2 text-sm font-medium " id="links">Home</a>
+        <a href="./about.html" class="block rounded-md px-3 py-2 text-sm font-medium" id="links">ABout</a>
+           <a href="./national.html" class="block rounded-md px-3 py-2 text-sm font-medium" id="links">National</a>
+          <a href="./international.html" class="block rounded-md px-3 py-2 text-sm font-medium"id="links">International</a>
+        <a href="./service.html" class="block rounded-md px-3 py-2 text-sm font-medium" id="links">Services</a>
+        <a href="./login.html" class="block rounded-md px-3 py-2 text-sm font-medium" id="links">Login</a>
+        <a href="./booking.html" class="block rounded-md px-3 py-2 text-sm font-medium" id="links">Contact</a>
+      </div>
+    </div>
+  </nav>
+  <!-- hero section -->
+  <section class="relative w-full h-screen overflow-hidden">
+    <video autoplay muted loop playsinline class="absolute top-0 left-0 w-full h-full object-cover z-0"
+      src="./media/herobanner.mp4" type="video/mp4"></video>
+    <!-- overlay -->
+    <div class="absolute inset-0 z-10 "></div>
+    <!-- hero content -->
+    <div class="relative z-20 flex items-center justify-center h-full text-center text-white px-4">
+      <div>
+        <h1 class="text-6xl md-text-6xl font-bold mb-6  ">Discover the World</h1>
+        <h2 class="text-lg md-text-4xl font-bold mb-6 ">Adventure awaits. Start your journey now</h2>
+        <a href="#destination-explore"
+          class="inline-block  text-[#ffffff] border border-white font-medium text-2xl px-6 py-3 rounded-full hover:bg-[#5da1c9] hover:text-white transition duration-300">Explore
+          Destinations</a>
+      </div>
+
+
+    </div>
+
+  </section>
+  <!-- search bar -->
+  <section class="search">
+    <div
+      class="absolute bottom-[-8.5rem] left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full max-w-4xl px-4 z-30 ">
+      <div
+        class=" bg-opacity-40 backdrop-blur-lg shadow-xl rounded-xl p-4 flex flex-col sm:flex-row gap-2 sm:gap-3 md:gap-4">
+        <input type="text" placeholder="Location"
+          class="w-full sm:w-1/4 px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400">
+        <input type="date"
+          class="w-full sm:w-1/4 px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400">
+        <select class="w-full sm:w-1/4 px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400">
+          <option value="">Guests</option>
+          <option value="1_Adult">1 Adult</option>
+          <option value="2_Adults">2 Adults</option>
+          <option value="2adults_1Child">2 adults, 1 Child</option>
+          <option value="2Adults_2Children">2 Adults, 2 Children</option>
+          <option value="Group(5+)">Group (5+)</option>
+        </select>
+        <button
+          class="w-full sm:w-auto px-6 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition">Search</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Explore Unique Tourism Gems Across The Globe -->
+  <!-- Heading -->
+  <div class=" sm:py-10 m-10">
+    <h2 class=" text-2xl font-semibold text-center" style="color: #f76c5e;">Continental Chronicles</h2>
+    <h1 class="text-4xl md:text-5xl font-bold  text-center" style="color: #2e2e2e;">Explore Unique Tourism Gems
+      Across The Globe</h1>
+  </div>
+
+  <!--Grid -->
+  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 max-w-screen-xl mx-auto px-4">
+
+    <!-- Box 1 -->
+    <div class="relative group overflow-hidden rounded-xl md:col-span-1 ">
+      <img src="./media/taj.jpg"
+        class="w-full h-[280px] object-cover rounded-xl  transform transition-transform duration-300 hover:scale-105">
+      <div
+        class="absolute inset-0 bg-black/20 group-hover:bg-black/30 transition duration-300 rounded-xl flex flex-col items-center justify-center text-white font-semibold brightness-90">
+        <h3 class="text-3xl md:text-4xl group-hover:scale-105 transition duration-300 drop-shadow-lg">Wah Taj!</h3>
+        <p class="italic text-lg mt-2 group-hover:scale-105 transition duration-300 drop-shadow-sm">Indulge in the magic
+        </p>
+      </div>
+    </div>
+
+    <!-- Box 2 -->
+    <div class="relative group overflow-hidden rounded-xl md:row-start-2 md:col-span-1">
+      <img src="./media/phuket.jpg"
+        class="w-full h-[280px] object-cover rounded-xl transform transition-transform duration-300 hover:scale-105">
+      <div
+        class="absolute  inset-0 bg-black/20 group-hover:bg-black/30 transition duration-300 rounded-xl flex flex-col items-center justify-center text-white font-semibold brightness-90">
+        <h3 class="text-3xl md:text-4xl group-hover:scale-105 transition duration-300 drop-shadow-lg">Phuket</h3>
+        <p class="italic text-lg mt-2 group-hover:scale-105 transition duration-300 drop-shadow-sm">Just Beautiful</p>
+      </div>
+    </div>
+
+    <!-- Box 3 -->
+    <div class="relative group overflow-hidden rounded-xl md:col-start-2 md:col-span-1 md:row-span-2">
+      <img src="./media/maldives.jpg"
+        class="w-full h-full object-cover rounded-xl transform transition-transform duration-300 hover:scale-105">
+      <div
+        class="absolute  inset-0 bg-black/20 group-hover:bg-black/30 transition duration-300 rounded-xl flex flex-col items-center justify-center text-white font-semibold brightness-90">
+        <h3 class="text-3xl md:text-4xl group-hover:scale-105 transition duration-300 drop-shadow-lg">Maldives</h3>
+        <p class="italic text-lg mt-2 group-hover:scale-105 transition duration-300 drop-shadow-sm">Be there to Believe
+          it</p>
+      </div>
+    </div>
+
+    <!-- Box 4 -->
+    <div class="relative group overflow-hidden rounded-xl md:col-start-3 md:row-start-1">
+      <img src="./media/paris.jpg"
+        class="w-full h-[280px] object-cover rounded-xl transform transition-transform duration-300 hover:scale-105">
+      <div
+        class="absolute  inset-0 bg-black/20 group-hover:bg-black/30 transition duration-300 rounded-xl flex flex-col items-center justify-center text-white font-semibold brightness-90">
+        <h3 class="text-3xl md:text-4xl group-hover:scale-105 transition duration-300 drop-shadow-lg">Love in Paris</h3>
+        <p class="italic text-lg mt-2 group-hover:scale-105 transition duration-300 drop-shadow-sm">Simply Romantic</p>
+      </div>
+    </div>
+
+    <!-- Box 5 -->
+    <div class="relative group overflow-hidden rounded-xl md:col-start-3 md:row-start-2">
+      <img src="./media/kashmir.jpg"
+        class="w-full h-[280px] object-cover rounded-xl transform transition-transform duration-300 hover:scale-105">
+      <div
+        class="absolute  inset-0 bg-black/20 group-hover:bg-black/30 transition duration-300 rounded-xl flex flex-col items-center justify-center text-white font-semibold brightness-90">
+        <h3 class="text-3xl md:text-4xl group-hover:scale-105 transition duration-300 drop-shadow-lg">Kashmir</h3>
+        <p class="italic text-lg mt-2 group-hover:scale-105 transition duration-300 drop-shadow-sm">Paradise On Earth
+        </p>
+      </div>
+    </div>
+
+    <!-- Box 6-->
+    <div class="relative group overflow-hidden rounded-xl md:col-start-4 md:col-span-1 md:row-span-2">
+      <img src="./media/baku.jpg"
+        class="w-full h-full object-cover rounded-xl transform transition-transform duration-300 hover:scale-105">
+      <div
+        class="absolute  inset-0  bg-black/20 group-hover:bg-black/30 transition duration-300 rounded-xl flex flex-col items-center justify-center text-white font-semibold brightness-90">
+        <h3 class="text-3xl md:text-4xl group-hover:scale-105 transition duration-300 drop-shadow-lg">Enticing Baku</h3>
+        <p class="italic text-lg mt-2 group-hover:scale-105 transition duration-300 drop-shadow-sm">Explore the Beauty
+        </p>
+      </div>
+    </div>
+
+  </div>
+  <!-- featured destinations -->
+  <div id="destination-explore" class="flex justify-center items-center flex-col px-6  sm:py-10">
+    <h1 class="mt-3 text-center  text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight"
+      style="font-family: 'Playfair', serif; color: #2e2e2e;">Wander
+      Themes</h1>
+    <p class="text-center text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto  ">
+      Discover handpicked destinations that inspire, soothe, and awaken your inner explorer.
+    </p>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 px-6 sm:px-12 lg:px-40 mt-10">
+
+      <!-- destination1 -->
+      <div class="transition duration-300 transform hover:scale-105 hover:shadow-xl rounded-lg bg-white/90 p-4"
+        style="background-color:#ffffff;">
+        <img src="./media/asiawondersjpg.jpg" alt="destination1" class="w-full h-52 object-cover rounded-md mb-3" />
+
+        <h3 class="text-center text-2xl mb-1" style="color: #707070;">Wonders of Asia</h3>
+
+        <p class="text-center text-sm mt-2" style="color: #5e5e5e;">
+          A land of contrasts - from ancient temples and vibrant street markets to tranquil beaches and misty mountains.
+          Let Asia's timeless spirit awaken your sense of wonder.
+        </p>
+
+        <div class="text-center mt-3">
+          <a class="explore-btn" href="./international.html">Explore Now</a>
+        </div>
+      </div>
+      <!-- destination2-->
+      <div class="transition duration-300 transform hover:scale-105 hover:shadow-xl rounded-lg bg-white/90 p-4"
+        style="background-color:#ffffff;">
+        <img src="./media/europe.jpg" alt="destination1" class="w-full h-52 object-cover rounded-md mb-3" />
+
+        <h3 class="text-center text-2xl mb-1" style="color:  #707070;">Charming Europe</h3>
+
+        <p class="text-center text-sm mt-2" style="color: #5e5e5e;">
+          Discover fairytale towns, historic capitals, and sun-drenched coastlines. Europe enchants with elegance,
+          romance, and a touch of old-world magic at every turn. Mesmerize!!!
+        </p>
+
+        <div class="text-center mt-3">
+          <a class="explore-btn" href="./international.html">Explore Now</a>
+        </div>
+      </div>
+      <!-- destination3-->
+      <div class="transition duration-300 transform hover:scale-105 hover:shadow-xl rounded-lg bg-white/90 p-4"
+        style="background-color:#ffffff;">
+        <img src="./media/india.jpg" alt="destination1" class="w-full h-52 object-cover rounded-md mb-3" />
+
+        <h3 class="text-center text-2xl mb-1" style="color:  #707070;">Incredible India</h3>
+
+        <p class="text-center text-sm mt-2" style="color: #5e5e5e;">
+          A symphony of color, culture, and spirituality—India offers sacred traditions, royal palaces, bustling
+          bazaars, and serene retreats that stir the soul.Gods Own Country!!!!
+        </p>
+
+        <div class="text-center mt-3">
+          <a class="explore-btn" href="./national.html">Explore Now</a>
+        </div>
+      </div>
+      <!-- destination4-->
+      <div class="transition duration-300 transform hover:scale-105 hover:shadow-xl rounded-lg bg-white/90 p-4"
+        style="background-color:#ffffff;">
+        <img src="./media/middleeast.jpg" alt="destination1" class="w-full h-52 object-cover rounded-md mb-3" />
+
+        <h3 class="text-center text-2xl mb-1" style="color:  #707070;">Discover the Middle East</h3>
+
+        <p class="text-center text-sm mt-2" style="color: #5e5e5e;">
+          Journey through golden deserts, timeless souks, and architectural marvels. The Middle East is a canvas of rich
+          history, mystique, and warm hospitality.Pack you bags!!!!
+        </p>
+
+        <div class="text-center mt-3">
+          <a class="explore-btn" href="./international.html">Explore Now</a>
+        </div>
+      </div>
+      <!-- destination5-->
+      <div class="transition duration-300 transform hover:scale-105 hover:shadow-xl rounded-lg bg-white/90 p-4"
+        style="background-color:#ffffff;">
+        <img src="./media/scenicamerica.jpg" alt="destination1" class="w-full h-52 object-cover rounded-md mb-3" />
+
+        <h3 class="text-center text-2xl mb-1" style="color:  #707070;">Scenic Americas</h3>
+
+        <p class="text-center text-sm mt-2" style="color: #5e5e5e;">
+          From the glaciers of Patagonia to the skylines of New York, the Americas are a vast playground of natural
+          wonders, cultural diversity, and unforgettable adventures.
+        </p>
+
+        <div class="text-center mt-3">
+          <a class="explore-btn" href="./international.html">Explore Now</a>
+        </div>
+      </div>
+      <!-- destination6-->
+      <div class="transition duration-300 transform hover:scale-105 hover:shadow-xl rounded-lg bg-white/90 p-4"
+        style="background-color:#ffffff;">
+        <img src="./media/oceania.jpg" alt="destination1" class="w-full h-52 object-cover rounded-md mb-3" />
+
+        <h3 class="text-center text-2xl mb-1" style="color:  #707070;"> Hidden Gems of Oceania</h3>
+
+        <p class="text-center text-sm mt-2" style="color: #5e5e5e;">
+          Explore pristine islands, coral reefs, and lush rainforests in this remote and magical part of the world.
+          Oceania is where nature and tranquility unite-perfect for travel, skincare, or lifestyle.
+        </p>
+
+        <div class="text-center mt-3">
+          <a class="explore-btn" href="./international.html">Explore Now</a>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+  <!-- why choose us -->
+  <section class="relative isolate overflow-hidden sm:py-10 lg:px-8" style="background-color: #FAF3E0;">
+    <div class="text-center mb-10">
+      <h1 class="mt-3 text-4xl font-bold tracking-tight sm:text-5xl"
+        style="font-family: 'Playfair', serif; color: #2e2e2e;">
+        Why Choose Us
+      </h1>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 px-6 pb-12">
+
+      <!-- Card 1 -->
+      <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition text-center">
+        <div
+          class="mx-auto mb-4 w-14 h-14 flex items-center justify-center rounded-full bg-blue-100 text-blue-500 text-xl">
+          <i class="fa-solid fa-earth-americas"></i>
+        </div>
+        <h3 class="text-lg font-semibold text-gray-800 mb-2">Authentic Travel Experiences</h3>
+        <p class="text-gray-600 text-sm">
+          We go beyond the typical tourist routes to offer immersive, local, and culturally rich experiences that
+          connect you to the heart of every destination.
+        </p>
+      </div>
+      <!-- card 2 -->
+      <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition text-center">
+        <div
+          class="mx-auto mb-4 w-14 h-14 flex items-center justify-center rounded-full bg-blue-100 text-blue-500 text-xl">
+          <i class="fa-solid fa-headset"></i>
+        </div>
+        <h3 class="text-lg font-semibold text-gray-800 mb-2">Dedicated Travel Support</h3>
+        <p class="text-gray-600 text-sm">
+          Our team is with you every step of the journey—before, during, and after your trip—with 24/7 support for
+          complete peace of mind.
+        </p>
+      </div>
+      <!-- card 3 -->
+      <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition text-center">
+        <div
+          class="mx-auto mb-4 w-14 h-14 flex items-center justify-center rounded-full bg-blue-100 text-blue-500 text-xl">
+          <i class="fa-solid fa-map-location-dot"></i>
+        </div>
+        <h3 class="text-lg font-semibold text-gray-800 mb-2">Custom-Made Itineraries</h3>
+        <p class="text-gray-600 text-sm">
+          Whether it’s a romantic escape, family vacation, or solo adventure, we design travel plans that perfectly
+          reflect your style and preferences.
+        </p>
+      </div>
+      <!-- card 4 -->
+      <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition text-center">
+        <div
+          class="mx-auto mb-4 w-14 h-14 flex items-center justify-center rounded-full bg-blue-100 text-blue-500 text-xl">
+          <i class="fa-solid fa-heart-circle-check"></i>
+        </div>
+        <h3 class="text-lg font-semibold text-gray-800 mb-2">Trusted by Happy Travelers</h3>
+        <p class="text-gray-600 text-sm">
+          With glowing reviews and repeat clients, our reputation is built on honesty, transparency, and exceeding
+          expectations—every single time.
+        </p>
+      </div>
+    </div>
+  </section>
+  <!-- budget -->
+<marquee behavior="" direction="left"  style=" font-size: 1.25rem; font-weight: bold; padding: 10px; color: #4b4b4b;">  ✈️ Join Soul Routes Now & Unlock Early Bird Discounts on Honeymoon & International Tours! 💼 Limited Time Offer – Book Today! 🌍</marquee>
+
+  <section class="relative  isolate overflow-hidden sm:py-10 lg:px-8" style="background-color: #FAF3E0;">
+    <!-- banner -->
+    <div
+      class="relative isolate flex items-center gap-x-6 overflow-hidden bg-gray-50 px-6 py-2.5 sm:px-3.5 sm:before:flex-1">
+      <div class="absolute top-1/2 left-[max(-7rem,calc(50%-52rem))] -z-10 -translate-y-1/2 transform-gpu blur-2xl"
+        aria-hidden="true">
+        <div class="aspect-577/310 w-144.25 bg-linear-to-r from-[#ff80b5] to-[#9089fc] opacity-30"
+          style="clip-path: polygon(74.8% 41.9%, 97.2% 73.2%, 100% 34.9%, 92.5% 0.4%, 87.5% 0%, 75% 28.6%, 58.5% 54.6%, 50.1% 56.8%, 46.9% 44%, 48.3% 17.4%, 24.7% 53.9%, 0% 27.9%, 11.9% 74.2%, 24.9% 54.1%, 68.6% 100%, 74.8% 41.9%)">
+        </div>
+      </div>
+      <div class="absolute top-1/2 left-[max(45rem,calc(50%+8rem))] -z-10 -translate-y-1/2 transform-gpu blur-2xl"
+        aria-hidden="true">
+        <div class="aspect-577/310 w-144.25 bg-linear-to-r from-[#ff80b5] to-[#9089fc] opacity-30"
+          style="clip-path: polygon(74.8% 41.9%, 97.2% 73.2%, 100% 34.9%, 92.5% 0.4%, 87.5% 0%, 75% 28.6%, 58.5% 54.6%, 50.1% 56.8%, 46.9% 44%, 48.3% 17.4%, 24.7% 53.9%, 0% 27.9%, 11.9% 74.2%, 24.9% 54.1%, 68.6% 100%, 74.8% 41.9%)">
+        </div>
+      </div>
+      <div class="flex flex-wrap items-center gap-x-4 gap-y-2">
+        <p class="text-sm/6 text-gray-900">
+          <strong class="font-semibold">Soul Routes 2025</strong><svg viewBox="0 0 2 2"
+            class="mx-2 inline size-0.5 fill-current" aria-hidden="true">
+            <circle cx="1" cy="1" r="1" />
+          </svg>Wander the World with Soul Routes ✨
+        </p>
+        <a href="#"
+          class="flex-none rounded-full bg-gray-900 px-3.5 py-1 text-sm font-semibold text-white shadow-xs hover:bg-gray-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-900">Book Now <span aria-hidden="true">&rarr;</span></a>
+      </div>
+      <div class="flex flex-1 justify-end">
+        <button type="button" class="-m-3 p-3 focus-visible:-outline-offset-4">
+          <span class="sr-only">Dismiss</span>
+          <svg class="size-5 text-gray-900" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
+            <path
+              d="M6.28 5.22a.75.75 0 0 0-1.06 1.06L8.94 10l-3.72 3.72a.75.75 0 1 0 1.06 1.06L10 11.06l3.72 3.72a.75.75 0 1 0 1.06-1.06L11.06 10l3.72-3.72a.75.75 0 0 0-1.06-1.06L10 8.94 6.28 5.22Z" />
+          </svg>
+        </button>
+      </div>
+    </div>
+<!-- bannerend -->
+    <div class="bg-white p-6 rounded-2xl shadow-lg bg-linear-to-r from-[#ff80b5] to-[#9089fc] opacity-90 ">
+      
+      <div class=" text-center mb-6">
+      <h2 class="text-3xl font-bold text-gray-800" style="font-family: 'Playfair', serif;">Holidays for every</h2>
+      <p class="text-4xl" style="font-family: 'Dancing Script', cursive; color: rgb(152, 18, 40);">Budget</p>
+    </div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 ">
+      <img src="./media/budget1.png" alt="" class="w-full h-auto object-cover rounded-xl">
+      <img src="./media/budget2.png" alt="" class="w-full h-auto object-cover rounded-xl">
+      <img src="./media/budget3.png" alt="" class="w-full h-auto object-cover rounded-xl">
+      <img src="./media/budget4.png" alt="" class="w-full h-auto object-cover rounded-xl">
+      <img src="./media/budget5.png" alt="" class="w-full h-auto object-cover rounded-xl">
+
+    </div>
+
+    </div>
+  </section>
+  <!-- testimonial section -->
+  <section class="relative isolate overflow-hidden  sm:py-10 lg:px-8" style="background-color: #FAF3E0;">
+    <!-- Decorative Backgrounds -->
+    <div class="absolute inset-0 -z-10 bg-[radial-gradient(45rem_50rem_at_top,#e0f2f1,white)] opacity-20"></div>
+    <div
+      class="absolute inset-y-0 right-1/2 -z-10 mr-16 w-[200%] origin-bottom-left skew-x-[-30deg] bg-white shadow-xl ring-1 shadow-[#2A9D8F]/10 ring-[#2A9D8F]/10 sm:mr-28 lg:mr-0 xl:mr-16 xl:origin-center">
+    </div>
+
+    <!-- Section Title -->
+    <div class="text-center mb-10">
+      <h2 class="text-4xl font-bold tracking-tight sm:text-5xl" style="font-family: 'Playfair', serif;color: #2e2e2e;">
+        What Our Customers Say</h2>
+      <p class="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">Real experiences from travelers who explored the world
+        with Soul Routes.</p>
+    </div>
+
+    <!-- Testimonial Grid -->
+    <div class="mx-auto max-w-7xl grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+
+      <!-- Testimonial1 -->
+      <div class="bg-white shadow-md rounded-xl p-6 border border-gray-100">
+        <div class="flex items-center space-x-4">
+          <img class="w-14 h-14 rounded-full object-cover" src="./media/testimonial1.jpg" alt="Judith Black">
+          <div>
+            <h3 class="font-semibold text-gray-900" style="color: #707070;">Judith Black</h3>
+            <p class="text-sm text-gray-500">Frequent Traveller</p>
+            <!-- Star Rating -->
+            <div class="flex mt-1 text-yellow-500">
+              <span class="mt-2">★★★★&#x2606;</span>
+            </div>
+          </div>
+        </div>
+        <p class="mt-4 text-gray-700 text-sm leading-relaxed" style="color: #5e5e5e;">
+          “Soul Routes made our honeymoon an unforgettable experience! Every detail was perfect, from the flights to the
+          local guides.”
+        </p>
+      </div>
+      <!-- Testimonial2 -->
+      <div class="bg-white shadow-md rounded-xl p-6 border border-gray-100">
+        <div class="flex items-center space-x-4">
+          <img class="w-14 h-14 rounded-full object-cover" src="./media/testimonial2.jpg" alt="Judith Black">
+          <div>
+            <h3 class="font-semibold text-gray-900" style="color: #707070;">Aarav & Meera Sharma</h3>
+            <p class="text-sm text-gray-500"> Newlyweds</p>
+            <!-- Star Rating -->
+            <div class="flex mt-1 text-yellow-500">
+              <span class="mt-2">★★★★&#x2606;</span>
+            </div>
+          </div>
+        </div>
+        <p class="mt-4 text-gray-700 text-sm leading-relaxed" style="color: #5e5e5e;">
+          “Soul Routes planned our honeymoon to perfection! From romantic sunset dinners in Santorini to cozy stays in
+          hidden gems of Europe, every moment felt like a dream. We didn't have to worry about a thing — they took care
+          of it all. Truly unforgettable!”
+        </p>
+      </div>
+      <!-- Testimonial3 -->
+      <div class="bg-white shadow-md rounded-xl p-6 border border-gray-100">
+        <div class="flex items-center space-x-4">
+          <img class="w-14 h-14 rounded-full object-cover" src="./media/testimonial3.jpg" alt="Judith Black">
+          <div>
+            <h3 class="font-semibold text-gray-900" style="color: #707070;">Nisha Verma</h3>
+            <p class="text-sm text-gray-500">Solo Traveler & Blogger</p>
+            <!-- Star Rating -->
+            <div class="flex mt-1 text-yellow-500">
+              <span class="mt-2">★★★★&#x2606;</span>
+            </div>
+          </div>
+        </div>
+        <p class="mt-4 text-gray-700 text-sm leading-relaxed" style="color: #5e5e5e;">
+          “As a solo traveler, I value freedom and safety — Soul Routes delivered both. My Thailand adventure was
+          exciting yet well-organized. I met incredible people, explored local cultures, and never felt alone. Highly
+          recommended for fellow solo explorers!”
+        </p>
+      </div>
+      <!-- Testimonial4 -->
+      <div class="bg-white shadow-md rounded-xl p-6 border border-gray-100">
+        <div class="flex items-center space-x-4">
+          <img class="w-14 h-14 rounded-full object-cover" src="./media/testimonial4.jpg" alt="Judith Black">
+          <div>
+            <h3 class="font-semibold text-gray-900" style="color: #707070;">Rohit Patel</h3>
+            <p class="text-sm text-gray-500">Father of Two</p>
+            <!-- Star Rating -->
+            <div class="flex mt-1 text-yellow-500">
+              <span class="mt-2">★★★★&#x2606;</span>
+            </div>
+          </div>
+        </div>
+        <p class="mt-4 text-gray-700 text-sm leading-relaxed" style="color: #5e5e5e;">
+          “Planning a vacation with two kids isn’t easy, but Soul Routes made it seamless. Our itinerary to Singapore
+          was fun-filled, kid-friendly, and safe. From Universal Studios to Sentosa Island, everything was spot-on.
+          We’re already planning our next trip with them!”
+        </p>
+      </div>
+      <!-- Testimonial5 -->
+      <div class="bg-white shadow-md rounded-xl p-6 border border-gray-100">
+        <div class="flex items-center space-x-4">
+          <img class="w-14 h-14 rounded-full object-cover" src="./media/testimonial5.jpg" alt="Judith Black">
+          <div>
+            <h3 class="font-semibold text-gray-900" style="color: #707070;">Priya Deshmukh</h3>
+            <p class="text-sm text-gray-500">Wellness Seeker</p>
+            <!-- Star Rating -->
+            <div class="flex mt-1 text-yellow-500">
+              <span class="mt-2">★★★★&#x2606;</span>
+            </div>
+          </div>
+        </div>
+        <p class="mt-4 text-gray-700 text-sm leading-relaxed" style="color: #5e5e5e;">
+          “I joined the Soul Routes wellness retreat in Bali, and it was life-changing. Yoga at sunrise, nourishing
+          meals, and peaceful surroundings helped me reset completely. The team curated every detail with care. I
+          returned home recharged and full of gratitude.”
+        </p>
+      </div>
+      <!-- Testimonial6 -->
+      <div class="bg-white shadow-md rounded-xl p-6 border border-gray-100">
+        <div class="flex items-center space-x-4">
+          <img class="w-14 h-14 rounded-full object-cover" src="./media/testimonial6.jpg" alt="Judith Black">
+          <div>
+            <h3 class="font-semibold text-gray-900" style="color: #707070;">Siddharth Nair</h3>
+            <p class="text-sm text-gray-500"> Group Tour Participant</p>
+            <!-- Star Rating -->
+            <div class="flex mt-1 text-yellow-500">
+              <span class="mt-2">★★★★&#x2606;</span>
+            </div>
+          </div>
+        </div>
+        <p class="mt-4 text-gray-700 text-sm leading-relaxed" style="color: #5e5e5e;">
+          “Our Europe group tour was a perfect blend of sightseeing, culture, and comfort. Soul Routes had everything
+          sorted — from guided tours in Paris to authentic meals in Rome. Great company, excellent coordination, and
+          unforgettable memories!”
+        </p>
+      </div>
+
+      <!-- cardend -->
+    </div>
+  </section>
+  <!-- blog -->
+  <div class="bg-white py-24 sm:py-32">
+    <div class="mx-auto max-w-7xl px-6 lg:px-8">
+      <div class="mx-auto max-w-2xl lg:mx-0">
+        <h2 class="text-4xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-5xl">Soul Stories</h2>
+        <p class="mt-2 text-lg/8 text-gray-600">Where Every Route Has a Story.</p>
+      </div>
+      <div
+        class="mx-auto mt-10 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 border-t border-gray-200 pt-10 sm:mt-16 sm:pt-16 lg:mx-0 lg:max-w-none lg:grid-cols-3">
+        <!-- 1 -->
+        <article class="flex max-w-xl flex-col items-start justify-between">
+          <div class="flex items-center gap-x-4 text-xs">
+            <time datetime="2020-03-16" class="text-gray-500">Jun 12, 2025</time>
+            <!-- <a href="#" class="relative z-10 rounded-full bg-gray-50 px-3 py-1.5 font-medium text-gray-600 hover:bg-gray-100">Marketing</a> -->
+          </div>
+          <div class="group relative">
+            <div class="overflow-hidden rounded-lg">
+              <img src="./media/honeymoon.jpg" alt=""
+                class="w-full h-48 object-cover rounded-lg transition-transform duration-300 group-hover:scale-105">
+            </div>
+            <h3 class="mt-3 text-lg/6 font-semibold text-gray-900 group-hover:text-gray-600">
+              <a href="https://www.makemytrip.com/tripideas/honeymoon-destinations">
+                <span class="absolute inset-0"></span>
+                Honeymoon & Couple Getaways
+              </a>
+            </h3>
+            <p class="mt-5 line-clamp-3 text-sm/6 text-gray-600">Discover the most romantic places on earth. Whether
+              you're planning a honeymoon, anniversary trip, or a surprise getaway, we’ve handpicked dreamy destinations
+              just for two.</p>
+          </div>
+          <div class="relative mt-8 flex items-center gap-x-4">
+            <img src="./media/Ava Sinclair .jpg" alt="" class="size-10 rounded-full bg-gray-50">
+            <div class="text-sm/6">
+              <p class="font-semibold text-gray-900">
+                <a href="#">
+                  <span class="absolute inset-0"></span>
+                  Ava Sinclair
+                </a>
+              </p>
+              <p class="text-gray-600">Romantic Escapes Curator</p>
+            </div>
+          </div>
+        </article>
+
+        <!-- More posts 2... -->
+        <article class="flex max-w-xl flex-col items-start justify-between">
+          <div class="flex items-center gap-x-4 text-xs">
+            <time datetime="2020-03-16" class="text-gray-500">Jun 12, 2025</time>
+            <!-- <a href="#" class="relative z-10 rounded-full bg-gray-50 px-3 py-1.5 font-medium text-gray-600 hover:bg-gray-100">Marketing</a> -->
+          </div>
+          <div class="group relative">
+            <div class="overflow-hidden rounded-lg">
+              <img src="./media/solo.jpg" alt=""
+                class="w-full h-48 object-cover rounded-lg transition-transform duration-300 group-hover:scale-105">
+            </div>
+            <h3 class="mt-3 text-lg/6 font-semibold text-gray-900 group-hover:text-gray-600">
+              <a href="https://www.holidify.com/collections/solo-travel-india">
+                <span class="absolute inset-0"></span>
+                Solo Sojourns
+              </a>
+            </h3>
+            <p class="mt-5 line-clamp-3 text-sm/6 text-gray-600">From empowering experiences to safety tips, discover
+              everything you need to know about exploring the world solo — for the brave hearts and independent spirits.
+            </p>
+          </div>
+          <div class="relative mt-8 flex items-center gap-x-4">
+            <img src="./media/Leo Bennett .jpg" alt="" class="size-10 rounded-full bg-gray-50">
+            <div class="text-sm/6">
+              <p class="font-semibold text-gray-900">
+                <a href="#">
+                  <span class="absolute inset-0"></span>
+                  Leo Bennett
+                </a>
+              </p>
+              <p class="text-gray-600">Solo Wanderer & Storyteller</p>
+            </div>
+          </div>
+        </article>
+        <!-- 3 -->
+        <article class="flex max-w-xl flex-col items-start justify-between">
+          <div class="flex items-center gap-x-4 text-xs">
+            <time datetime="2020-03-16" class="text-gray-500">Jun 12, 2025</time>
+            <!-- <a href="#" class="relative z-10 rounded-full bg-gray-50 px-3 py-1.5 font-medium text-gray-600 hover:bg-gray-100">Marketing</a> -->
+          </div>
+          <div class="group relative">
+            <div class="overflow-hidden rounded-lg">
+              <img src="./media/hiddengem.jpg" alt=""
+                class="w-full h-48 object-cover rounded-lg transition-transform duration-300 group-hover:scale-105">
+            </div>
+            <h3 class="mt-3 text-lg/6 font-semibold text-gray-900 group-hover:text-gray-600">
+              <a href="https://www.worldpackers.com/articles/underrated-countries-to-visit">
+                <span class="absolute inset-0"></span>
+                Offbeat & Hidden Treasures
+              </a>
+            </h3>
+            <p class="mt-5 line-clamp-3 text-sm/6 text-gray-600">Skip the crowds and find paradise in lesser-known
+              destinations. Our handpicked hidden gems are perfect for travelers who want something truly unique and
+              undiscovered.</p>
+          </div>
+          <div class="relative mt-8 flex items-center gap-x-4">
+            <img src="./media/Mira Das.jpg" alt="" class="size-10 rounded-full bg-gray-50">
+            <div class="text-sm/6">
+              <p class="font-semibold text-gray-900">
+                <a href="#">
+                  <span class="absolute inset-0"></span>
+                  Mira Das
+                </a>
+              </p>
+              <p class="text-gray-600">Hidden Treasures Explorer</p>
+            </div>
+          </div>
+        </article>
+        <!-- 4 -->
+        <article class="flex max-w-xl flex-col items-start justify-between">
+          <div class="flex items-center gap-x-4 text-xs">
+            <time datetime="2020-03-16" class="text-gray-500">Jun 12, 2025</time>
+            <!-- <a href="#" class="relative z-10 rounded-full bg-gray-50 px-3 py-1.5 font-medium text-gray-600 hover:bg-gray-100">Marketing</a> -->
+          </div>
+          <div class="group relative">
+            <div class="overflow-hidden rounded-lg">
+              <img src="./media/travelsmart.jpg" alt=""
+                class="w-full h-48 object-cover rounded-lg transition-transform duration-300 group-hover:scale-105">
+            </div>
+            <h3 class="mt-3 text-lg/6 font-semibold text-gray-900 group-hover:text-gray-600">
+              <a href="#">
+                <span class="absolute inset-0"></span>
+                Travel Smarter
+              </a>
+            </h3>
+            <p class="mt-5 line-clamp-3 text-sm/6 text-gray-600">Plan like a pro! Find the latest travel tips, packing
+              hacks, budgeting tricks, and smart planning resources to help you travel effortlessly.</p>
+          </div>
+          <div class="relative mt-8 flex items-center gap-x-4">
+            <img src="./media/Ethan Cruz .jpg" alt="" class="size-10 rounded-full bg-gray-50">
+            <div class="text-sm/6">
+              <p class="font-semibold text-gray-900">
+                <a href="https://www.smartertravel.com/">
+                  <span class="absolute inset-0"></span>
+                  Ethan Cruz
+                </a>
+              </p>
+              <p class="text-gray-600">Smart Travel Strategist</p>
+            </div>
+          </div>
+        </article>
+        <!-- 5 -->
+        <article class="flex max-w-xl flex-col items-start justify-between">
+          <div class="flex items-center gap-x-4 text-xs">
+            <time datetime="2020-03-16" class="text-gray-500">Jun 12, 2025</time>
+            <!-- <a href="#" class="relative z-10 rounded-full bg-gray-50 px-3 py-1.5 font-medium text-gray-600 hover:bg-gray-100">Marketing</a> -->
+          </div>
+          <div class="group relative">
+            <div class="overflow-hidden rounded-lg">
+              <img src="./media/trending2.jpg" alt=""
+                class="w-full h-48 object-cover rounded-lg transition-transform duration-300 group-hover:scale-105">
+            </div>
+            <h3 class="mt-3 text-lg/6 font-semibold text-gray-900 group-hover:text-gray-600">
+              <a href="#">
+                <span class="absolute inset-0"></span>
+                Trending Now
+              </a>
+            </h3>
+            <p class="mt-5 line-clamp-3 text-sm/6 text-gray-600">Keep up with the hottest destinations and travel trends
+              of the year. Perfect for spontaneous adventurers and trend-savvy travelers.</p>
+          </div>
+          <div class="relative mt-8 flex items-center gap-x-4">
+            <img src="./media/Sofia Rai .jpg" alt="" class="size-10 rounded-full bg-gray-50">
+            <div class="text-sm/6">
+              <p class="font-semibold text-gray-900">
+                <a href="https://www.makemytrip.com/tripideas/places-to-visit-in-summer-in-india">
+                  <span class="absolute inset-0"></span>
+                  Sofia Rai
+                </a>
+              </p>
+              <p class="text-gray-600">Trendspotting Nomad</p>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </div>
+
+
+  <!-- footer -->
+ <footer class="bg-[#5da1c9] ">
+    <div class=" py-24 sm:py-32">
+      <div class="mx-auto max-w-7xl px-6 lg:px-8">
+        <h2 class="text-center text-lg/8 font-semibold text-gray-900">Proudly Partnered with the Pioneers of Travel</h2>
+        <div class="mt-10 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6 place-items-center">
+          <img class="max-h-24 w-full object-contain" src="./media/taj-removebg-preview.png" alt="Transistor" />
+          <img class="max-h-24 w-full object-contain" src="./media/makemytrrip-removebg-preview.png" alt="Reform" />
+          <img class="max-h-24 w-full object-contain" src="./media/emirates-removebg-preview.png" alt="Tuple" />
+          <img class="max-h-24 w-full object-contain" src="./media/clubmahindra.png" alt="SavvyCal"  />
+          <img class="max-h-24 w-full object-contain" src="./media/thomascook.png" alt="Statamic" />
+        </div>
+      </div>
+    </div>
+    <!-- section2 -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 px-6 lg:px-20 py-10 text-center">
+      <div>
+        <h1 class="text-center text-3xl font-bold mb-2" style="font-family: 'Dancing Script', cursive;">Soul Routes</h1>
+        <h2 class="text-lg font-semibold">Head Office - Kochi</h2>
+        <p class="text-sm">2nd Floor,Bayview Complex, Marine Drive </p>
+        <p class="text-sm">Shanmugam Road,Kochi Kerala-682031</p>
+        <p class="text-sm">+91 4578912597</p>
+        <p class="text-sm"><a href="mailto:info@soulroutes.com" class="contact-mail">info@soulroutes.com</a></p>
+        <div class="flex justify-center space-x-6 text-3xl ">
+          <i class="fa-brands fa-instagram"></i>
+          <i class="fa-brands fa-whatsapp"></i>
+          <i class="fa-brands fa-twitter"></i>
+          <i class="fa-brands fa-youtube"></i>
+          <i class="fa-brands fa-facebook"></i>
+        </div>
+        <h1 class="text-center mt-10 text-3xl"> About Soul Routes</h1>
+        <p>Soul Routes curates unforgettable journeys across the globe. Whether it's a honeymoon in the Maldives, solo
+          travel in Europe, or hidden treasures in India — we make every trip soulful and seamless.</p>
+
+      </div>
+
+      <div class="text-center">
+        <div class="flex flex-col items-center space-y-2 text-xl ">
+          <h1 class="text-center text-3xl font-bold" style="font-family: 'Dancing Script', cursive;">Soul Routes</h1>
+          <a href="./index.html" class="hover:text-white transition-colors">Home</a>
+          <a href="./about.html" class="hover:text-white transition-colors">About Us</a>
+          <a href="./national.html" class="hover:text-white transition-colors">National</a>
+          <a href="./international.html" class="hover:text-white transition-colors">International</a>
+          <a href="./service.html" class="hover:text-white transition-colors">Services</a>
+          <a href="./login.html" class="hover:text-white transition-colors">Login</a>
+          <a href="./booking.html" class="hover:text-white transition-colors">Contact</a>
+        </div>
+
+      </div>
+
+      <section class="px-4  ">
+        <h2 class="text-3xl md:text-4xl font-bold text-center  text-[#2e2e2e]" style="font-family: 'Playfair', serif;">
+          <u> Our Branches</u>
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 ">
+
+
+          <div class="flex flex-col items-center">
+            <h3 class="text-xl font-semibold text-gray-800 mb-2"><u>Noida</u></h3>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3929.877752532691!2d76.31775010000001!3d9.944128200000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b0873d997c4c9b5%3A0x1adc8f73e23c6aa8!2sForum%20Kochi!5e0!3m2!1sen!2sin!4v1749921335448!5m2!1sen!2sin"
+              width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <p class="mt-2 text-center text-sm font-medium ">5th Floor, Horizon Towers, Sector 6</p>
+            <p>Noida, UP– 201301 </p>
+
+            <p>+91 98765 43210</p>
+            <p><a href="mailto:north@soulroutes.com" class="contact-mail">north@soulroutes.com</a></p>
+          </div>
+
+          <div class="flex flex-col items-center text-justify">
+            <h3 class="text-xl font-semibold text-gray-800 mb-2"><u>Trivandrum</u></h3>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3928.8748218670153!2d76.3084032!3d10.0271873!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b080dafbed183bf%3A0x5951f316ba13a37e!2sLuLu%20International%20Shopping%20Mall!5e0!3m2!1sen!2sin!4v1749921379496!5m2!1sen!2sin"
+              width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <p class="mt-2 text-center text-sm font-medium ">3rd Floor, Skyline Business Bay</p>
+            <p>Technopark Campus Road, </p>
+            <p> Tvm 695582</p>
+
+            <p>+91 98957 24680</p>
+            <p><a href="mailto: trivandrum@soulroutes.com" class="contact-mail"> trivandrum@soulroutes.com</a></p>
+          </div>
+        </div>
+      </section>
+
+    </div>
+    <div class="flex justify-center items-center p-3">
+      <h6 class="text-center text-sm md:text-base">©2025 Soul Routes. All rights reserved. Crafted with ✈️ and ❤️ for
+        travel
+        lovers. </h6>
+    </div>
+      <div id="arrowUp" class="fixed bottom-6 right-6 z-50">
+  <a href="#SoulRoutes" 
+     class="bg-blue-600 hover:bg-blue-800 text-white p-4 rounded-full shadow-lg transition-all duration-300">
+    <i class="fa-solid fa-arrow-up text-xl"></i>
+  </a>
+</div>
+
+  </footer>
+</body>
+
+
+
+</html>

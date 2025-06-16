@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Login</title>
+   <!-- favicon -->
+  <link rel="shortcut icon" href="./media/favicon.jpg" type="image/x-icon">
+  <!-- google font  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Ancizar+Serif:ital,wght@0,300..900;1,300..900&family=Comic+Relief:wght@400;700&family=Dancing+Script:wght@400..700&family=Doto:wght@100..900&family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet">
+  <!-- font awesome CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+    * {
+      font-family: "Playfair", serif;
+    }
+
+   
+  </style>
+ 
+</head>
+
+<body  id="SoulRoutes" class="min-h-screen bg-[url(https://images.unsplash.com/photo-1494500764479-0c8f2919a3d8?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)] bg-center bg-cover bg-no-repeat h-[100vh] w-screen relative justify-center ">
+
+
+
+
+<!-- navbar -->
+<nav class="bg-transparent sticky top-0 z-50 w-full shadow-md">
+    <div class=" flex h-16 items-center justify-between">
+      <!-- logo -->
+      <div class="pl-2 ml-2">
+        <!-- <img src="./media/logo1.jpg" alt="logo"class="w-24 h-20"> -->
+        <h1 class="text-xl font-bold ml-0" style="font-family: 'Dancing Script', cursive; color: #ffffff;">
+          Soul Routes</h1>
+      </div>
+      <!-- desktop -->
+      <div class="hidden sm:ml-6 sm:block" style="color: #ffffff">
+        <div class="flex space-x-4">
+            <a href="./index.html" class="rounded-md px-4 py-2 text-xl font-medium inline-block" id="links">Home</a>
+          <a href="./about.html" class="rounded-md px-4 py-2 text-xl font-medium inline-block" id="links">About</a>
+          <a href="./national.html" class="rounded-md px-4 py-2 text-xl font-medium inline-block" id="links">National</a>
+          <a href="./international.html" class="rounded-md px-4 py-2 text-xl font-medium inline-block"id="links">International</a>
+          <a href="./service.html" class="rounded-md px-4 py-2 text-xl font-medium inline-block" id="links">Services</a>
+          <a href="./login.html" class="rounded-md px-4 py-2 text-xl font-medium inline-block" id="links">Login</a>
+          <a href="./booking.html" class="rounded-md px-4 py-2 text-xl font-medium inline-block" id="links">Contact</a>
+        </div>
+      </div>
+    </div>
+    <!-- Mobile menu, show/hide based on menu state. -->
+    <div class="sm:hidden" id="mobile-menu">
+      <div class="space-y-1 px-2 pt-2 pb-3">
+         <a href="./index.html" class="block rounded-md px-3 py-2 text-sm font-medium " id="links">Home</a>
+        <a href="./about.html" class="block rounded-md px-3 py-2 text-sm font-medium" id="links">ABout</a>
+           <a href="./national.html" class="block rounded-md px-3 py-2 text-sm font-medium" id="links">National</a>
+          <a href="./international.html" class="block rounded-md px-3 py-2 text-sm font-medium"id="links">International</a>
+        <a href="./service.html" class="block rounded-md px-3 py-2 text-sm font-medium" id="links">Services</a>
+        <a href="./login.html" class="block rounded-md px-3 py-2 text-sm font-medium" id="links">Login</a>
+        <a href="./booking.html" class="block rounded-md px-3 py-2 text-sm font-medium" id="links">Contact</a>
+      </div>
+    </div>
+  </nav>  
+
+
+
+<!-- form -->
+
+    <div class="w-full mt-20 px-4">
+    <div
+      class="text-white text-center text-xl flex flex-col gap-4 mx-auto border-2 rounded-md px-4 py-8 w-[90%] sm:w-[60%] md:w-[40%] lg:w-[30%] shadow-lg shadow-indigo-500/50 bg-transparent bg-opacity-40 backdrop-blur-sm">
+      <h1 class="uppercase font-bold text-2xl">LOGIN</h1>
+
+      <div class="flex flex-col gap-2 w-full px-4">
+        <label class="text-left font-semibold" for="">USERNAME</label>
+        <input class="px-4 py-2 text-white rounded-full border-2 outline-none" type="text" placeholder="username" />
+      </div>
+
+      <div class="flex flex-col gap-2 w-full px-4">
+        <label class="text-left font-semibold" for="">PASSWORD</label>
+        <input class="px-4 py-2 text-white rounded-full border-2 outline-none" type="password" placeholder="password" />
+      </div>
+
+      <div class="text-sm flex flex-wrap justify-center items-center gap-2">
+        <input type="checkbox" id="remember" />
+        <label for="remember">Remember me</label>
+        <a class="hover:underline ml-2" href="#">Forgot password?</a>
+      </div>
+
+      <button
+        class="bg-purple-600 hover:bg-indigo-700 text-white border-4 border-double px-4 py-2 rounded-md text-xl w-48 mx-auto">
+        Login
+      </button>
+
+      <a class="hover:underline text-sm" href="signup.html">Don't have an account? Signup</a>
+    </div>
+  </div>
+
+</body>
+
+</html>
